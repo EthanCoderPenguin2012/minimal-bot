@@ -3,7 +3,7 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "python github_app.py",
+    "startCommand": "gunicorn github_app:app --bind 0.0.0.0:$PORT",
     "restartPolicyType": "always"
   }
 }

@@ -1,1 +1,1 @@
-web: python github_app.py
+web: gunicorn github_app:app --bind 0.0.0.0:$PORT
